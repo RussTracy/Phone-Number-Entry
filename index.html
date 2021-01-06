@@ -1,4 +1,66 @@
-<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Phone Number Entry</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="pageHeader">Phone Number Entry</h1>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="row g-3 needs-validation" name="phoneForm" id="phone-form" onsubmit="return"
+                            novalidate>
+                            <div class="col-md-12">
+                                <label class="form-label" for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" name="phone" id="phone" maxlength="14"
+                                    placeholder="(___) ___-____" pattern="[2-9][0-9]{9}" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback" id="phoneError">
+                                    Phone number cannot start with a 0 or 1 and must be 10 digits long
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        Last Phone Number
+
+                    </div>
+                    <div class="card-body">
+                        <div id="phone-numbers"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,4 +104,4 @@
     <script src="./assets/js/script.js"></script>
 </body>
 
-</html>
+</html> -->
