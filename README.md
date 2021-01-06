@@ -1,5 +1,4 @@
 # Phone-Number-Entry
-Week 6: Server-Side API's Challenge 
 
 ## Description
 
@@ -35,7 +34,7 @@ Write a simple Java method that returns the phone number in the completed format
 
 
 ## Site Location
-[Weather Vane](https://russtracy.github.io/Phone-Number-Entry/)
+[Phone Number Entry](https://russtracy.github.io/Phone-Number-Entry/)
 
 ## Contribution
 Made by [Russ Tracy]
