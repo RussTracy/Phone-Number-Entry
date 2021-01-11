@@ -1,6 +1,7 @@
 .pageHeader{
     text-align: center;
     color: #036;
+    font-size: 7vw;
 }
 .form-control{
     border-color: #808080;
@@ -16,5 +17,24 @@
     font-weight: bold;
 }
 .card{
-    min-height: 175px;
+    min-height: 180px;
+}
+.placeholder{
+    position: relative;
+    z-index: 5;
+    color: #333;
+}
+.phone-input, .phone-input:focus, .phone-input::selection{
+    position: relative;
+    top: -38px;
+    color: transparent;
+    caret-color: black;
+    padding-left: 18px;
+    letter-spacing: .1rem;
+    z-index: 20;
+    background-color: transparent;
+    margin-bottom: -35px;
+}
+.spacer{
+    margin-bottom: 10px;
 }

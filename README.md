@@ -1,11 +1,10 @@
 # Phone-Number-Entry
-Week 6: Server-Side API's Challenge 
 
 ## Description
 
 This site was designed for a job interview with Zions Bancorporation. There were a number of requirements that I had not experienced in the past and required a great deal of research.
 * Estimated Hours: 10-12
-* Actual Hours: 14 
+* Actual Hours: 16 
 
 ## Built With
 * HTML
@@ -35,7 +34,7 @@ Write a simple Java method that returns the phone number in the completed format
 
 
 ## Site Location
-[Weather Vane](https://russtracy.github.io/Phone-Number-Entry/)
+[Phone Number Entry](https://russtracy.github.io/Phone-Number-Entry/)
 
 ## Contribution
 Made by [Russ Tracy]
