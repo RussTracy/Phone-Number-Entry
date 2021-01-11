@@ -4,7 +4,7 @@
 
 This site was designed for a job interview with Zions Bancorporation. There were a number of requirements that I had not experienced in the past and required a great deal of research.
 * Estimated Hours: 10-12
-* Actual Hours: 14 
+* Actual Hours: 16 
 
 ## Built With
 * HTML
