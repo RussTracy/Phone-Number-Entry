@@ -1,23 +1,23 @@
-var formEl = document.querySelector("#phone-form")
-var phoneNumberInputEl = document.querySelector("#phone");
-var placeholderEl = document.querySelector("#placeholder")
-var phoneNumberDisplayEl = document.querySelector("#phone-numbers");
+const formEl = document.querySelector("#phone-form")
+const phoneNumberInputEl = document.querySelector("#phone");
+const placeholderEl = document.querySelector("#placeholder")
+const phoneNumberDisplayEl = document.querySelector("#phone-numbers");
 
 // Function to display error message
-function displayError(elementId, errorMessage) {
+const displayError = (elementId, errorMessage) => {
     document.getElementById(elementId).innerHTML = errorMessage;
 }
 
 // Function to submit and validate form
-function formSubmitHandler(event) {
+const formSubmitHandler = (event) => {
 
     event.preventDefault();
 
     // Get only numbers from phone number field value
-    var phoneNumber = ('' + phoneNumberInputEl.value).replace(/\D/g, '')
+    let phoneNumber = ('' + phoneNumberInputEl.value).replace(/\D/g, '')
 
     // Set phone form error to true
-    var phoneError = true;
+    let phoneError = true;
 
     // Validate phone number
     if (phoneNumber === "") {
@@ -51,9 +51,9 @@ function formSubmitHandler(event) {
 };
 
 // Clean and format phone number as needed
-function formatPhoneNumber(phoneNumber) {
-    var cleanNumber = ('' + phoneNumber).replace(/\D/g, '')
-    var match = cleanNumber.match(/^(\d{3})(\d{3})(\d{4})$/)
+const formatPhoneNumber = (phoneNumber) => {
+    let cleanNumber = ('' + phoneNumber).replace(/\D/g, '')
+    let match = cleanNumber.match(/^(\d{3})(\d{3})(\d{4})$/)
     if (match) {
         formattedPhoneNumber = '(' + match[1] + ') ' + match[2] + '-' + match[3];
         return formattedPhoneNumber;
@@ -62,18 +62,18 @@ function formatPhoneNumber(phoneNumber) {
 }
 
 // Load phone number from local storage and test for proper length
-var loadPhoneNumber = function () {
+const loadPhoneNumber = () => {
     phoneNumber = JSON.parse(localStorage.getItem("phoneNumbers"));
     if (phoneNumber) {
         // If phone number in local storage is too short, log error and do not display number
         if (phoneNumber.length < 10) {
             console.log('Phone Number is too short!');
-            return;
+            return null;
         }
         // If phone number in local storage is too long, log error and do not display number
         if (phoneNumber.length > 10) {
             console.log('Phone Number is too long!');
-            return;
+            return null;
         }
         // Format phone number and display on page
         formatPhoneNumber(phoneNumber);
@@ -85,69 +85,69 @@ var loadPhoneNumber = function () {
 }
 
 // Phone field placeholder function
-var fieldPlaceHolder = function () {
-    var number = ('' + phoneNumberInputEl.value).replace(/\D/g, ''); // Remove any non-digit entries
+const fieldPlaceHolder = () => {
+    let number = ('' + phoneNumberInputEl.value).replace(/\D/g, ''); // Remove any non-digit entries
 
     if (number.length === 0) {
         placeholderEl.textContent = "(___) ___-____";
         phoneNumberInputEl.value = number; // If user enters symbols or letters, remove them and return field value to numeric state
     }
     if (number.length === 1) {
-        var match = number.match(/^(\d{1})$/);
+        let match = number.match(/^(\d{1})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + "__) ___-____";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 2) {
-        var match = number.match(/^(\d{2})$/);
+        match = number.match(/^(\d{2})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + "_) ___-____";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 3) {
-        var match = number.match(/^(\d{3})$/);
+        match = number.match(/^(\d{3})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") ___-____";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 4) {
-        var match = number.match(/^(\d{3})(\d{1})$/);
+        match = number.match(/^(\d{3})(\d{1})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") " + match[2] + "__-____";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 5) {
-        var match = number.match(/^(\d{3})(\d{2})$/);
+        match = number.match(/^(\d{3})(\d{2})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") " + match[2] + "_-____";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 6) {
-        var match = number.match(/^(\d{3})(\d{3})$/);
+        match = number.match(/^(\d{3})(\d{3})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") " + match[2] + "-____";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 7) {
-        var match = number.match(/^(\d{3})(\d{3})(\d{1})$/);
+        match = number.match(/^(\d{3})(\d{3})(\d{1})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") " + match[2] + "-" + match[3] + "___";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 8) {
-        var match = number.match(/^(\d{3})(\d{3})(\d{2})$/);
+        match = number.match(/^(\d{3})(\d{3})(\d{2})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") " + match[2] + "-" + match[3] + "__";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 9) {
-        var match = number.match(/^(\d{3})(\d{3})(\d{3})$/);
+        match = number.match(/^(\d{3})(\d{3})(\d{3})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") " + match[2] + "-" + match[3] + "_";
         phoneNumberInputEl.value = number;
     }
     if (number.length === 10) {
-        var match = number.match(/^(\d{3})(\d{3})(\d{4})$/);
+        match = number.match(/^(\d{3})(\d{3})(\d{4})$/);
         placeholderEl.textContent = "";
         placeholderEl.textContent = "(" + match[1] + ") " + match[2] + "-" + match[3];
         phoneNumberInputEl.value = number;
