@@ -2,7 +2,7 @@
 
 ## Description
 
-This site was designed for a job interview with Zions Bancorporation. There were a number of requirements that I had not experienced in the past and required a great deal of research.
+This site was designed for a job interview with Zions Bancorporation. There were a number of requirements that I had not experienced in the past and required a great deal of research. The placeholder text requirement was definitely a challenge. Overall, this was a fun project that I enjoyed working on and I really liked how the final product turned out.
 * Estimated Hours: 10-12
 * Actual Hours: 16 
 
@@ -18,7 +18,7 @@ This site was designed for a job interview with Zions Bancorporation. There were
 4)	The label and text entry color should be #333; the input border is #808080.
 5)	The placeholder is (\_\_\_) \_\_\_-____ and should be visible as the user is typing into the form: example (2__) \___-____.
 6)	The displayed format for the completed phone number is (234) 567-8901.
-7)	We want to successfully “validate” the password under the following rules: the phone number does not start with a 0 or 1, is only digits, and is 10 digits long. All other entries are not successfully “validated.”
+7)	We want to successfully “validate” the phone number under the following rules: the phone number does not start with a 0 or 1, is only digits, and is 10 digits long. All other entries are not successfully “validated.”
 8)	Successful validations apply a green box shadow to the input. Unsuccessful validations apply a red box shadow to the input.
 9)	The field should be re-populated with some value on load.
 10)	On submit, the phone number displayed should be the successfully validated entry the user inputs.
