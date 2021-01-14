@@ -1,8 +1,19 @@
+/* Page Styles */
 .pageHeader{
     text-align: center;
     color: #036;
     font-size: 7vw;
 }
+.card{
+    min-height: 180px;
+}
+.spacer{
+    margin-bottom: 10px;
+}
+/* End Page Styles */
+
+
+/* Form Styles */
 .form-control{
     border-color: #808080;
 }
@@ -15,9 +26,6 @@
 .form-label{
     color: #333;
     font-weight: bold;
-}
-.card{
-    min-height: 180px;
 }
 .placeholder{
     position: relative;
@@ -35,6 +43,4 @@
     background-color: transparent;
     margin-bottom: -35px;
 }
-.spacer{
-    margin-bottom: 10px;
-}
+/* End Form Styles */
