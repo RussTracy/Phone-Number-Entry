@@ -2,7 +2,7 @@
 
 ## Description
 
-This site was designed for a job interview with Zions Bancorporation. There were a number of requirements that I had not experienced in the past and required a great deal of research. The placeholder text requirement was definitely a challenge. Overall, this was a fun project that I enjoyed working on and I really liked how the final product turned out.
+This site was designed for a job interview. There were a number of requirements that I had not experienced in the past and required a great deal of research. The placeholder text requirement was definitely a challenge. Overall, this was a fun project that I enjoyed working on and I really liked how the final product turned out.
 * Estimated Hours: 10-12
 * Actual Hours: 16 
 
